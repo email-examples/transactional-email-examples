@@ -19,6 +19,9 @@ Runnable kits for [Notify](https://notify.cx) — minimal transactional email AP
 | [contact-form-nextjs](./contact-form-nextjs/) | Next.js server route | [REST](https://notify.cx/docs/how-to-send-email-from-rest-api) |
 | [github-actions-send](./github-actions-send/) | Scheduled / CI job | [Cron recipe](https://notify.cx/docs/recipe-cron-github-actions) |
 | [python-send](./python-send/) | Python stdlib | [Python](https://notify.cx/docs/how-to-use-notify-with-python) |
+| [express-send](./express-send/) | Express | [Express](https://notify.cx/docs/how-to-use-notify-with-express) |
+| [magic-link-nextjs](./magic-link-nextjs/) | Magic link sketch | [Magic link](https://notify.cx/docs/how-to-send-magic-link-and-otp-emails) |
+| [vercel-cron-send](./vercel-cron-send/) | Vercel Cron | [Vercel](https://notify.cx/docs/how-to-use-notify-with-vercel) |
 
 Official SDK/MCP source: https://github.com/notifycx/notifycx
 
