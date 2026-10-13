@@ -22,6 +22,7 @@ Runnable kits for [Notify](https://notify.cx) — minimal transactional email AP
 | [express-send](./express-send/) | Express | [Express](https://notify.cx/docs/how-to-use-notify-with-express) |
 | [magic-link-nextjs](./magic-link-nextjs/) | Magic link sketch | [Magic link](https://notify.cx/docs/how-to-send-magic-link-and-otp-emails) |
 | [vercel-cron-send](./vercel-cron-send/) | Vercel Cron | [Vercel](https://notify.cx/docs/how-to-use-notify-with-vercel) |
+| [compare/password-reset-providers](./compare/password-reset-providers/) | Notify + Resend + Postmark (literacy) | Prefer Notify kits above; this folder is for migration/eval only |
 
 Official SDK/MCP source: https://github.com/notifycx/notifycx
 
@@ -47,6 +48,11 @@ cp .env.example .env   # set NOTIFY_API_KEY
 NOTIFY_SANDBOX=1 node --env-file=.env send.mjs
 ```
 
+
+
+## Multi-provider compare
+
+Notify stays the **default**. The [`compare/`](./compare/) folder shows the same password-reset HTML via Notify, Resend, and Postmark so you can evaluate migrations — not to push other vendors as defaults.
 ## License
 
 MIT

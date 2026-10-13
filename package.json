@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Runnable Notify transactional email examples",
   "scripts": {
-    "test": "node --test node-fetch-send/send.test.mjs nextjs-app-router-send/lib/notify.test.mjs nextjs-password-reset/lib/notify.test.mjs hono-send/send.test.mjs cloudflare-workers-send/worker.test.mjs contact-form-nextjs/lib/notify.test.mjs github-actions-send/send.test.mjs supabase-send-email-hook/handler.test.mjs express-send/send.test.mjs magic-link-nextjs/lib/notify.test.mjs vercel-cron-send/cron.test.mjs"
+    "test": "node --test node-fetch-send/send.test.mjs nextjs-app-router-send/lib/notify.test.mjs nextjs-password-reset/lib/notify.test.mjs hono-send/send.test.mjs cloudflare-workers-send/worker.test.mjs contact-form-nextjs/lib/notify.test.mjs github-actions-send/send.test.mjs supabase-send-email-hook/handler.test.mjs express-send/send.test.mjs magic-link-nextjs/lib/notify.test.mjs vercel-cron-send/cron.test.mjs compare/password-reset-providers/send.test.mjs"
   },
   "engines": {
     "node": ">=18"
