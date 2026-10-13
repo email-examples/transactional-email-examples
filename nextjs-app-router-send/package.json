@@ -1,0 +1,11 @@
+{
+  "name": "nextjs-app-router-send",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test lib/notify.test.mjs"
+  },
+  "dependencies": {
+    "notifycx": "^1.1.0"
+  }
+}

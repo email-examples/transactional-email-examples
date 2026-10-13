@@ -1,0 +1,10 @@
+name = "notify-workers-send"
+main = "src/index.js"
+compatibility_date = "2024-10-01"
+
+# Set secrets (do not put real keys in this file):
+#   npx wrangler secret put NOTIFY_API_KEY
+# Optional vars:
+# [vars]
+# NOTIFY_FROM = "noreply@your-verified-domain.com"
+# NOTIFY_SANDBOX = "1"

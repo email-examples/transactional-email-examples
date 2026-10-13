@@ -1,0 +1,21 @@
+name: Scheduled Notify send
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '0 9 * * 1'
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Send email
+        env:
+          NOTIFY_API_KEY: ${{ secrets.NOTIFY_API_KEY }}
+          NOTIFY_TO: ${{ vars.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ vars.NOTIFY_FROM }}
+        run: node github-actions-send/send.mjs

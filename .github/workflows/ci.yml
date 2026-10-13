@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm test
+      - name: Secret pattern scan
+        run: |
+          set -euo pipefail
+          if git grep -I -E 'AKIA[0-9A-Z]{16}|BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY|aws_secret_access_key\s*=\s*.+' -- . \
+            ':(exclude)package-lock.json'; then
+            echo "Possible secret pattern found"
+            exit 1
+          fi
+          if git ls-files | grep -E '(^|/)\.env($|\.)' | grep -v '\.env\.example'; then
+            echo "Tracked .env file found"
+            exit 1
+          fi
+          echo "Secret scan OK"
